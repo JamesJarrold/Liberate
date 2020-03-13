@@ -14,10 +14,10 @@ class LIBERATE_API ALiberatePlayerState : public APlayerState
 
 public:
 	UFUNCTION(BlueprintCallable)
-		void UpgradeSkill(UpgradeType type, class ALiberateCharacter* Player);
+		void UpgradeSkill(const UpgradeType type, class ALiberateCharacter* Player);
 
 	UFUNCTION(Server, Reliable)
-		void ServerUpgradeSkill(UpgradeType type, class ALiberateCharacter* Player);
+		void ServerUpgradeSkill(const UpgradeType type, class ALiberateCharacter* Player);
 
 	UFUNCTION(BlueprintCallable)
 		void InitialisePlayerSkills(class ALiberateCharacter* Player);

@@ -41,6 +41,8 @@ struct FEnemyStats
 		float AttackRatePerSec;
 };
 
+///TODO: A lot of this could be moved to data tables in the Editor
+
 const TMap<E_REGION_DIFFICULTY, FEnemyStats> EnemyDifficultyStats = 
 {
 	///EnemyStats: Health, Damage, Accuracy, Rate of Fire

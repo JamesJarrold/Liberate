@@ -33,6 +33,8 @@ void AEnemyBase::Initialise(E_REGION_DIFFICULTY difficulty, FBoxSphereBounds& bo
 {
 	if (Role == ROLE_Authority)
 	{
+		///Depending on the difficulty of the enemy (which is defined by the region they spawn in) get their stat values and set their patrol bounds
+
 		const FEnemyStats* EnemyStats = EnemyDifficultyStats.Find(difficulty);
 		Health = EnemyStats->Health;
 		Damage = EnemyStats->Damage;

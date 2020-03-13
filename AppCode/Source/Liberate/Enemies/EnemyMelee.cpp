@@ -33,6 +33,7 @@ void AEnemyMelee::HitPlayer()
 			FVector PlayerPos = Character->GetActorLocation();
 			float DistToPlayer = FVector::Dist(PlayerPos, GetActorLocation());
 
+			//TODO: Change this to a nicer solution like a hit box check in front of the enemy a certain radius for hit check
 			if (DistToPlayer < 250.f)
 			{
 				HasHitPlayer = !HasHitPlayer;

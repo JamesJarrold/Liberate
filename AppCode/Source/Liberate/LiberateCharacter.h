@@ -31,7 +31,7 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	FORCEINLINE class ULiberatePlayerCamera* GetFollowCamera() const { return PlayerCamera; }
 
-	void ReceiveDamage(const float& Damage);
+	void ReceiveDamage(const float Damage);
 
 	UFUNCTION(BlueprintCallable)
 	void PlayerDead();
@@ -61,10 +61,10 @@ public:
 		void SpawnAbilityBlastEffect();
 
 	UFUNCTION(BlueprintCallable)
-		bool SpendSkillPoints(int SkillPointsCost);
+		bool SpendSkillPoints(const int SkillPointsCost);
 
 	UFUNCTION()
-		void SetShieldStrength(float Strength) { AbilityShield->SetShieldStrength(Strength); }
+		void SetShieldStrength(const float Strength) { AbilityShield->SetShieldStrength(Strength); }
 
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
@@ -232,10 +232,10 @@ protected:
 		void ServerPlayFootstepSound();
 
 	UFUNCTION(Server, Reliable)
-		void ServerAwardSkillPoints(int SkillPointsGained);
+		void ServerAwardSkillPoints(const int SkillPointsGained);
 
 	UFUNCTION(Server, Reliable)
-		void ServerSpendSkillPoints(int SkillPointsCost);
+		void ServerSpendSkillPoints(const int SkillPointsCost);
 
 	UPROPERTY(ReplicatedUsing = OnRep_GameOver)
 		bool IsGameOver;

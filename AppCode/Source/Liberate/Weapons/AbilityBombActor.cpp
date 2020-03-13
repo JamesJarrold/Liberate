@@ -67,6 +67,8 @@ void AAbilityBombActor::Explode(AActor* MyOverlappedActor, AActor* OtherActor)
 
 	FVector EndPos = Position + (0, 0, -1);
 
+	///Bombs create a sphere which deals damage to all enemies within the radius. The enemy will be dealt more damage the closer they are to the explosion 
+
 	FCollisionShape AbilitySphere = FCollisionShape::MakeSphere(BlastRadius);
 	GetWorld()->SweepMultiByChannel(ActorsHit, Position, EndPos, FQuat::Identity, ECC_WorldStatic, AbilitySphere);
 

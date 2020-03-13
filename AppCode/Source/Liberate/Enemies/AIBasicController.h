@@ -21,7 +21,6 @@ public:
 	AAIBasicController();
 
 	virtual void BeginPlay() override;
-	//virtual void PostInitializeComponents() override;
 
 protected:
 	UPROPERTY(EditDefaultsOnly, Category = AI)

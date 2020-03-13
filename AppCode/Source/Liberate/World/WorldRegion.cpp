@@ -126,6 +126,8 @@ void AWorldRegion::Tick(float DeltaTime)
 
 void AWorldRegion::UpdateMapPulseEffect()
 {
+	///TODO: this is a bit of hack.. should move to a timeline
+
 	if (SelectedInWorldMap)
 	{
 		UMaterialInstanceDynamic* DynamicMatInstance = RegionOverlay->CreateAndSetMaterialInstanceDynamic(0);

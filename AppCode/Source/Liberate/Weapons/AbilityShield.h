@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "AbilityBase.h"
+#include "Camera/CameraShake.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "AbilityShield.generated.h"
 
@@ -24,7 +25,7 @@ public:
 		void ActivateAbilityEffects();
 
 	FORCEINLINE bool GetShieldIsActive() const { return IsShieldActive; }
-	FORCEINLINE void SetShieldStrength(float Strength) { ShieldStrength = Strength; }
+	FORCEINLINE void SetShieldStrength(const float Strength) { ShieldStrength = Strength; }
 
 protected:
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_ShieldActive)

@@ -39,6 +39,8 @@ void UAbilityBlast::OnRep_BlastActive()
 
 void UAbilityBlast::ActivateAbility(const FVector& Position, float DamageModifier)
 {
+	///Blast ability creates an explosion around the player which deals damage to all enemies in the radius and knocks them back
+
 	UAISense_Hearing::ReportNoiseEvent(GetWorld(), GetOwner()->GetActorLocation(), 1.0f, GetOwner(), 1.0f);
 	TArray<FHitResult> EnemiesHit;
 	FVector EndPos = Position + (0, 0, -1);

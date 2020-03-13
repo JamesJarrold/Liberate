@@ -16,6 +16,8 @@ UAbilityBomb::UAbilityBomb()
 
 void UAbilityBomb::ActivateAbility(USceneComponent* Mesh, const FVector& Position, FVector& ThrowDirection, FVector& Velocity, float DamageModifier)
 {
+	///Spawn a bomb actor which acts as a grenade to throw at groups of enemies
+
 	UGameplayStatics::SpawnEmitterAttached(SpawnEffect, Mesh, FName("Muzzle_02"));
 	UGameplayStatics::PlaySoundAtLocation(GetWorld(), ActivateSoundFX, Position, 0.5f);
 
@@ -35,6 +37,8 @@ void UAbilityBomb::ThrowBomb(const FVector& Position, FVector& ThrowDirection, F
 
 	float FinalDamage = Damage * DamageModifier;
 	Velocity.Normalize();
+	
+	//Use the direction the player is aiming with some aditional z value to give a nicer throwing arc for the bomb
 	ThrowDirection += (Velocity / 10);
 	ThrowDirection.Z += 0.6f;
 	Bomb->ThrowInDirection(GetOwner(), ThrowDirection, FinalDamage);

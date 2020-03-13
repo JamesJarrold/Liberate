@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "AbilityBase.h"
+#include "Camera/CameraShake.h"
 #include "AbilityBlast.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew, BlueprintType)

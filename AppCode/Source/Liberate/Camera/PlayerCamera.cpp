@@ -15,6 +15,8 @@ void ULiberatePlayerCamera::BeginPlay()
 
 	if (BlastAbilityCameraAngleCurve && BlastAbilityCameraPositionCurve)
 	{
+		///Setup timeline for camera animation of blast ability
+
 		FOnTimelineFloat TimelineCallbackFloat;
 		FOnTimelineVector TimelineCallbackVector;
 
@@ -34,6 +36,8 @@ void ULiberatePlayerCamera::TickComponent(float DeltaTime, ELevelTick TickType, 
 
 void ULiberatePlayerCamera::PlayBlastAbilityCameraAnimation()
 {
+	///When the blast ability is activated, play a camera animation based on timeline
+
 	TimelineValue = BlastAbilityCameraTimeline.GetPlaybackPosition();
 	CameraAngleValue = BlastAbilityCameraAngleCurve->GetFloatValue(TimelineValue);
 	CameraPositionValue = BlastAbilityCameraPositionCurve->GetVectorValue(TimelineValue);

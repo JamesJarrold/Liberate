@@ -66,6 +66,8 @@ void AEnemyProjectile::Attack()
 		UObject* TargetActor = Blackboard->GetValueAsObject("TargetActor");
 		ACharacter* Player = Cast<ACharacter>(TargetActor);
 
+		///Aim at the player with a random offset from their centre point to give some random accuracy levels based on difficulty
+
 		float FinalAimOffset = AimOffsetMax / Accuracy;
 		float OffsetX = FMath::RandRange(0 - FinalAimOffset, FinalAimOffset);
 		float OffsetY = FMath::RandRange(0 - FinalAimOffset, FinalAimOffset);

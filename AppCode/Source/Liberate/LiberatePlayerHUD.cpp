@@ -6,17 +6,14 @@
 
 ALiberatePlayerHUD::ALiberatePlayerHUD()
 {
-
 }
 
 void ALiberatePlayerHUD::DrawHUD()
 {
 	Super::DrawHUD();
-
 }
 
 void ALiberatePlayerHUD::BeginPlay()
 {
 	Super::BeginPlay();
-
 }

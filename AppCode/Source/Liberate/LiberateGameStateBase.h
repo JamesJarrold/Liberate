@@ -7,9 +7,6 @@
 #include "World/WorldRegion.h"
 #include "LiberateGameStateBase.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class LIBERATE_API ALiberateGameStateBase : public AGameStateBase
 {
@@ -23,7 +20,7 @@ public:
 	FORCEINLINE TArray<AWorldRegion*> GetRegions() const { return Regions; }
 	FORCEINLINE TSubclassOf<AWorldRegion> GetRegionClass() const { return RegionClass; }
 
-	FORCEINLINE void SetTotalRegions(int RegionCount) { TotalRegions = RegionCount; }
+	FORCEINLINE void SetTotalRegions(const int RegionCount) { TotalRegions = RegionCount; }
 	FORCEINLINE void RegionCompleted() { CompletedRegions++; }
 	FORCEINLINE void SetRegions(TArray<AWorldRegion*> WorldRegions) { Regions = WorldRegions; }
 	

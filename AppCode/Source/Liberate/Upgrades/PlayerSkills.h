@@ -3,6 +3,8 @@
 #include "CoreMinimal.h"
 #include "PlayerSkills.generated.h"
 
+///TODO: Move all this stuff to data tables in Unreal
+
 UENUM(BlueprintType)
 enum UpgradeType
 {

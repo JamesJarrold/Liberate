@@ -6,7 +6,7 @@
 #include "GameFramework/Controller.h"
 #include "UnrealNetwork.h"
 
-void ALiberatePlayerState::UpgradeSkill(UpgradeType type, ALiberateCharacter* Player)
+void ALiberatePlayerState::UpgradeSkill(const UpgradeType type, ALiberateCharacter* Player)
 {
 	if (Role < ROLE_Authority)
 	{
@@ -65,7 +65,7 @@ void ALiberatePlayerState::UpgradeSkill(UpgradeType type, ALiberateCharacter* Pl
 	}
 }
 
-void ALiberatePlayerState::ServerUpgradeSkill_Implementation(UpgradeType type, ALiberateCharacter* Player)
+void ALiberatePlayerState::ServerUpgradeSkill_Implementation(const UpgradeType type, ALiberateCharacter* Player)
 {
 	UpgradeSkill(type, Player);
 }

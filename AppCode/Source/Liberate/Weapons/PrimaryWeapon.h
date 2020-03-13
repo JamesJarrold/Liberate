@@ -6,6 +6,7 @@
 #include "Components/SceneComponent.h"
 #include "Particles/ParticleSystem.h"
 #include "Sound/SoundBase.h"
+#include "Camera/CameraShake.h"
 #include "PrimaryWeapon.generated.h"
 
 USTRUCT()

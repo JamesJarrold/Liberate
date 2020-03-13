@@ -453,7 +453,7 @@ void ALiberateCharacter::SpawnAbilityBlastEffect()
 	AbilityBlast->PreActivateAbility();
 }
 
-void ALiberateCharacter::ReceiveDamage(const float& Damage)
+void ALiberateCharacter::ReceiveDamage(const float Damage)
 {
 	if (Role == ROLE_Authority)
 	{
@@ -588,7 +588,7 @@ void ALiberateCharacter::OnRep_GameWon()
 	}
 }
 
-void ALiberateCharacter::AwardSkillPoints(int SkillPointsGained)
+void ALiberateCharacter::AwardSkillPoints(const int SkillPointsGained)
 {
 	if (Role < ROLE_Authority)
 	{
@@ -603,12 +603,12 @@ void ALiberateCharacter::AwardSkillPoints(int SkillPointsGained)
 	CurrPlayerState->SetSkillPoints(SkillPoints);
 }
 
-void ALiberateCharacter::ServerAwardSkillPoints_Implementation(int SkillPointsGained)
+void ALiberateCharacter::ServerAwardSkillPoints_Implementation(const int SkillPointsGained)
 {
 	AwardSkillPoints(SkillPointsGained);
 }
 
-bool ALiberateCharacter::SpendSkillPoints(int SkillPointsCost)
+bool ALiberateCharacter::SpendSkillPoints(const int SkillPointsCost)
 {
 	if (Role < ROLE_Authority)
 	{
@@ -630,7 +630,7 @@ bool ALiberateCharacter::SpendSkillPoints(int SkillPointsCost)
 	}
 }
 
-void ALiberateCharacter::ServerSpendSkillPoints_Implementation(int SkillPointsCost)
+void ALiberateCharacter::ServerSpendSkillPoints_Implementation(const int SkillPointsCost)
 {
 	SpendSkillPoints(SkillPointsCost);
 }

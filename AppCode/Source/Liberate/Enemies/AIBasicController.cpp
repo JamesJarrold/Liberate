@@ -57,13 +57,10 @@ void AAIBasicController::BeginPlay()
 	AIPerception->OnTargetPerceptionUpdated.AddDynamic(this, &AAIBasicController::CheckSenses);
 }
 
-//void AAIBasicController::PostInitializeComponents()
-//{
-//	Super::PostInitializeComponents();
-//}
-
 void AAIBasicController::CheckSenses(AActor* UpdatedActor, FAIStimulus Stimulus)
 {	
+	///Update AIPerception and if a player is detected then target them
+
 	ACharacter* Player = Cast<ACharacter>(UpdatedActor);
 	if (Player)
 	{
